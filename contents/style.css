@@ -1,6 +1,6 @@
 body {
 	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 1.2em);
+	font-size: var(--vscode-markdown-font-size, 1.6em);
 	padding: 0 26px;
 	line-height: var(--vscode-markdown-line-height, 28px);
 	word-wrap: break-word;
