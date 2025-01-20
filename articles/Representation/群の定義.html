@@ -384,6 +384,7 @@ code {
   </script>
 <h1 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h1>
 <hr>
+<hr>
 <p>$G$を任意の集合とする．写像，<br>
 $$<br>
 g:G × G → G<br>
@@ -412,6 +413,7 @@ $$</p>
 aa^{-1} = a^{-1}a = e<br>
 $$</p>
 <hr>
+<hr>
 <p>群$G$に含まれる元の個数を$G$の<strong>位数</strong>（order）という．</p>
 <p>群$G$の部分集合$H$もまた$G$で与えられた乗法によって群となるとき，$H$を$G$の<strong>部分群</strong>（subgroup）という．$H$が$G$の部分群であるための必要十分条件は，$H$の任意の元$a,b$に対して$ab^{-1}$もまた$H$の群になることである．</p>
 <p>群$G$の任意の元$a,b$に対して，</p>
@@ -419,6 +421,29 @@ $$</p>
 ab = ba<br>
 $$</p>
 <p>が成り立つとき，$G$を<strong>Abel群</strong>または<strong>可換群</strong>と呼ぶ．</p>
+
+<div style="text-align: center;">
+	<button class="button before" onclick="goToBefore()">前の記事</button>
+	<button class="home-button top" onclick="goToHome()">戻る</button>
+	<button class="button next" onclick="goToNext()">次の記事</button>
+</div>
+
+<script>
+	function goToBefore() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToNext() {
+		// 移動先のURLを指定
+		window.location.href = "./群準同型と群同型.html"; 
+	}
+
+	function goToHome() {
+		// 移動先のURLを指定
+		window.location.href = "../../contents/Representation.html"; 
+	}
+</script>
 
 </body>
 </html>

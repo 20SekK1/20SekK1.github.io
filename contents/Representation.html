@@ -39,12 +39,16 @@
 
 <h3>量子論と群論・表現論</h3>
 
-<footer>
-	<div style="position: fixed; bottom: 20px; width: 100%; text-align: center;">
-		<a href="../index.html">HOME</a>
-		<a href="javascript:history.back()" style="margin-left: 20px;">戻る</a>
-	</div>
-</footer>
+<div style="text-align: center;">
+    <button class="home-button top" onclick="goToHome()">Home</button>
+  </div>
+  
+  <script>
+    function goToHome() {
+      // 移動先のURLを指定
+      window.location.href = "./index.html"; 
+    }
+  </script>
 
 </body>
 </html>
