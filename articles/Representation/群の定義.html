@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>群の定義.md</title>
+<title>群の定義</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -12,7 +12,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
 	font-size: var(--vscode-markdown-font-size, 14px);
 	padding: 0 26px;
 	line-height: var(--vscode-markdown-line-height, 22px);
@@ -388,42 +388,32 @@ code {
   <!--追記 2.ここまで-->
 <h1 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h1>
 <hr>
-<p>$G$を任意の集合とする．写像<br>
+<p>$G$を任意の集合とする．写像，<br>
 $$<br>
-\begin{equation}<br>
 g:G × G → G<br>
-\end{equation}<br>
 $$<br>
 が与えられ，$a,b,c ∈ G$に対して以下の条件を満たしているとき，$G$を<strong>群</strong>（group）と呼ぶ．ただし，混乱のないときは単に<br>
 $$<br>
-\begin{equation}<br>
 g(a,b) → ab<br>
-\end{equation}<br>
 $$<br>
 と略記する．</p>
 <ol>
 <li>(結合律)：</li>
 </ol>
 <p>$$<br>
-\begin{equation}<br>
 a(bc) = (ab)c<br>
-\end{equation}<br>
 $$</p>
 <ol start="2">
 <li>（単位元の存在）：<strong>単位元</strong>と呼ばれる特別な元$e$が存在して，すべての$a ∈ G$に対し，以下が成り立つ</li>
 </ol>
 <p>$$<br>
-\begin{equation}<br>
 ae = ea = a<br>
-\end{equation}<br>
 $$</p>
 <ol start="3">
 <li>（逆元の存在）：<strong>逆元</strong>と呼ばれる特別な元$a^{-1}$が存在して，以下が成り立つ．</li>
 </ol>
 <p>$$<br>
-\begin{equation}<br>
 aa^{-1} = a^{-1}a = e<br>
-\end{equation}<br>
 $$</p>
 <hr>
 <p>群$G$に含まれる元の個数を$G$の<strong>位数</strong>（order）という．</p>
@@ -431,24 +421,9 @@ $$</p>
 <p>$H$が$G$の部分群であるための必要十分条件は，$H$の任意の元$a,b$に対して$ab^{-1}$もまた$H$の群になることである．</p>
 <p>群$G$の任意の元$a,b$に対して，</p>
 <p>$$<br>
-\begin{equation}<br>
 ab = ba<br>
-\end{equation}<br>
 $$</p>
 <p>が成り立つとき，$G$を<strong>Abel群</strong>または<strong>可換群</strong>と呼ぶ．</p>
-
-
-<div style="text-align: center;">
-	<a style="margin-left: 0px; background-color: #dddddd; padding: 20px; display: inline-block;">次：群準同型と群同型</a>
-</div>
-
-
-<footer>
-	<div style="position: fixed; bottom: 20px; width: 100%; text-align: center;">
-		<a href="../../index.html">HOME</a>
-		<a href="javascript:history.back()" style="margin-left: 20px;">戻る</a>
-	</div>
-</footer>
 
 </body>
 </html>
