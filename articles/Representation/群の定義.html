@@ -389,7 +389,7 @@ code {
 $$<br>
 g:G × G → G<br>
 $$<br>
-が与えられ，$a,b,c ∈ G$に対して以下の条件を満たしているとき，$G$を<strong>群</strong>（group）と呼ぶ．ただし，混乱のないときは単に<br>
+が与えられ，$a,b,c ∈ G$に対して以下の条件を満たしているとき，$(G,g)$を<strong>群</strong>（group）と呼ぶ．ただし，混乱のないときは単に群を$G$と表記し，<br>
 $$<br>
 g(a,b) → ab<br>
 $$<br>
@@ -424,7 +424,7 @@ $$</p>
 
 <div style="text-align: center;">
 	<button class="button before" onclick="goToBefore()">前の記事</button>
-	<button class="home-button top" onclick="goToHome()">戻る</button>
+	<button class="home-button top" onclick="goToBack()">戻る</button>
 	<button class="button next" onclick="goToNext()">次の記事</button>
 </div>
 
@@ -439,11 +439,22 @@ $$</p>
 		window.location.href = "./群準同型と群同型.html"; 
 	}
 
-	function goToHome() {
+	function goToBack() {
 		// 移動先のURLを指定
 		window.location.href = "../../contents/Representation.html"; 
 	}
 </script>
+
+<div style="text-align: center;">
+    <button class="home-button top" onclick="goToHome()">Home</button>
+  </div>
+  
+  <script>
+    function goToHome() {
+      // 移動先のURLを指定
+      window.location.href = "../../index.html"; 
+    }
+  </script>
 
 </body>
 </html>
