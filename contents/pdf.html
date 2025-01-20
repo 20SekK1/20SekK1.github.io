@@ -8,12 +8,14 @@
 </head>
 <body>
 
-    <div class="center">
-        <button class="home-button" onclick="scrollToTop()">Home</button>
+    <div style="text-align: center;">
+        <button class="home-button top" onclick="goToHome()">Home</button>
       </div>
+      
       <script>
-        function scrollToTop() {
-          window.location.href = "../index.html";
+        function goToHome() {
+          // 移動先のURLを指定
+          window.location.href = "../../index.html"; 
         }
       </script>
 
