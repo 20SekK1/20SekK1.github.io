@@ -3,6 +3,7 @@ body {
 	font-size: var(--vscode-markdown-font-size, 1.4em);
 	padding: 0 26px;
 	line-height: var(--vscode-markdown-line-height, 2.0);
+	margin: 32px;
 	word-wrap: break-word;
 }
 
