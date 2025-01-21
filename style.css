@@ -100,6 +100,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+a:link {
+	color: #0675cb;
+}
+
 a:focus,
 input:focus,
 select:focus,

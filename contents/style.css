@@ -100,7 +100,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:focus,
+a:focus ,
 input:focus,
 select:focus,
 textarea:focus {
@@ -126,8 +126,11 @@ h1, h2, h3 {
 }
 
 h3 {
-	padding: 7px;
-	background: #dddddd;
+	padding: 10px;
+	background: linear-gradient(135deg, #4c81d8 0%, #c2e9fb 100%);
+	border-radius: 5px;
+	color: #333;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 table {
