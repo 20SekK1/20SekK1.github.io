@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>群.md</title>
+<title>群の例.md</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -170,64 +170,63 @@
           : 'default'
     });
   </script>
-<h1 id="%E7%BE%A4">群</h1>
-<h2 id="%E5%AE%9A%E7%BE%A9">定義</h2>
-<p>ここではまず，群の定義を与える．</p>
+<h1 id="%E7%BE%A4%E3%81%AE%E4%BE%8B">群の例</h1>
+<p>ここでは，群の具体例を紹介し，群についての理解を深める．ここで紹介した群は，後に様々な具体例として登場する．</p>
+<h2 id="%E7%BD%AE%E6%8F%9B%E3%81%A8%E4%BA%92%E6%8F%9B">置換と互換</h2>
+<p>まずは，対称群の導入のために置換の定義を与えよう．</p>
 <blockquote>
-<h3 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h3>
-<p>$G$を任意の集合とする．写像，<br>
+<h3 id="%E7%BD%AE%E6%8F%9B%E3%81%AE%E5%AE%9A%E7%BE%A9">置換の定義</h3>
+<p>$n$個の数字の集合$I_n = \lbrace 1,2,\ldots,n\rbrace$を定義したとき，全単射写像，<br>
 $$<br>
-⋅:G × G → G<br>
+\begin{array}{cccc}<br>
+σ :&amp; I_n &amp; → &amp; I_n \cr<br>
+&amp; ⟒   &amp;    &amp; ⟒   \cr<br>
+&amp; i   &amp; ↦  &amp; σ(i)<br>
+\end{array}<br>
 $$<br>
-が与えられ，$a,b,c ∈ G$に対して以下の条件を満たしているとき，$(G,⋅)$を<strong>群</strong>（group）と呼ぶ．ただし，混乱のないときは単に群を$G$と表記し，<br>
+のことを$I_n$の<strong>置換</strong>という．$σ$は，<br>
 $$<br>
-a⋅b → ab<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; ⋯ &amp; n \cr<br>
+σ(1) &amp; σ(2) &amp; ⋯ &amp; σ(n)<br>
+\end{array}<br>
+\right)<br>
 $$<br>
-と略記する．</p>
-<ol>
-<li>（結合律）：</li>
-</ol>
-<p>$$<br>
-a(bc) = (ab)c<br>
-$$</p>
-<ol start="2">
-<li>（単位元の存在）：<strong>単位元</strong>と呼ばれる特別な元$e$が存在して，すべての$a ∈ G$に対し，以下が成り立つ</li>
-</ol>
-<p>$$<br>
-ae = ea = a<br>
-$$</p>
-<ol start="3">
-<li>（逆元の存在）：<strong>逆元</strong>と呼ばれる特別な元$a^{-1}$が存在して，以下が成り立つ．</li>
-</ol>
-<p>$$<br>
-aa^{-1} = a^{-1}a = e<br>
-$$</p>
+と表される．そして，置換$σ,τ$の合成，<br>
+$$<br>
+σ(τ(i)) = (στ)(i)<br>
+$$<br>
+を置換の<strong>積</strong>という．図式で表せば，<br>
+$$<br>
+\begin{align*}<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; ⋯ &amp; n \cr<br>
+σ(1) &amp; σ(2) &amp; ⋯ &amp; σ(n)<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; ⋯ &amp; n \cr<br>
+τ(1) &amp; τ(2) &amp; ⋯ &amp; τ(n)<br>
+\end{array}<br>
+\right)<br>
+\cr<br>
+=\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; ⋯ &amp; n \cr<br>
+(στ)(1) &amp; (στ)(2) &amp; ⋯ &amp; (στ)(n)<br>
+\end{array}<br>
+\right)<br>
+\end{align*}<br>
+$$<br>
+となる．</p>
 </blockquote>
-<p>群の例を考える．最も簡単な群の例の1つは，整数全体の集合と加法の組$(\mathbb{Z},+)$である．このとき，単位元は$0$で，逆元は$a ∈ \mathbb{Z}$に対して$-a$である．</p>
-<h2 id="%E4%BD%8D%E6%95%B0">位数</h2>
-<p>群$G$に含まれる元の個数を$G$の<strong>位数</strong>（order）という．</p>
-<br>
-<p>位数が有限の群を<strong>有限群</strong>といい，そうでない群を<strong>無限群</strong>という．</p>
-<h2 id="%E9%83%A8%E5%88%86%E7%BE%A4">部分群</h2>
-<p>群$G$の部分集合$H$もまた$G$で与えられた乗法によって群となるとき，$H$を$G$の<strong>部分群</strong>（subgroup）という．$H$が$G$の部分群であるための必要十分条件は，$H$の任意の元$a,b$に対して$ab^{-1}$もまた$H$の群になることである．</p>
-<br>
-<p>部分群の具体例を考える．$n$の倍数の集合である$(n\mathbb{Z},+)$は$(\mathbb{Z},+)$の部分群である．実際に$a,b ∈ n\mathbb{Z}$を考えたとき，<br>
-$$<br>
-ab^{-1} = a - b ∈ n\mathbb{Z}<br>
-$$<br>
-となるので，部分群であるための必要十分条件を確かに満たしている．</p>
-<h2 id="%E5%8F%AF%E6%8F%9B%E7%BE%A4">可換群</h2>
-<p>群$G$の任意の元$a,b$に対して，<br>
-$$<br>
-ab = ba<br>
-$$<br>
-が成り立つとき，$G$を<strong>Abel群</strong>または<strong>可換群</strong>と呼ぶ．</p>
-<h2 id="%E6%AD%A3%E8%A6%8F%E9%83%A8%E5%88%86%E7%BE%A4">正規部分群</h2>
-<p>群$H$を群$G$の部分群とする．すべての$g ∈ G, h ∈ H$に対して，<br>
-$$<br>
-ghg^{-1} ∈ H<br>
-$$<br>
-となるとき，$H$を$G$の<strong>正規部分群</strong>といい，$H ◃ G$あるいは$G ▹ H$と書く．</p>
+<p>次に，互換を定義する．この概念は交代群を定義するために必要である．</p>
+<h2 id="%E5%AF%BE%E7%A7%B0%E7%BE%A4">対称群</h2>
+<h2 id="%E7%BD%AE%E6%8F%9B%E7%BE%A4">置換群</h2>
+<h2 id="%E4%BA%A4%E4%BB%A3%E7%BE%A4">交代群</h2>
 
 
 <div style="text-align: center; margin-top: 20px;">
@@ -244,7 +243,7 @@ $$<br>
 
 	function goToNext() {
 		// 移動先のURLを指定
-		window.location.href = "./群の例.html"; 
+		window.location.href = ""; 
 	}
 
 	function goToBack() {
