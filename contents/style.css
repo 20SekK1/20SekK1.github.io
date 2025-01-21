@@ -1,234 +1,137 @@
-body {
-	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-	font-size: var(--vscode-markdown-font-size, 1.4em);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 2.0);
-	margin: 32px;
-	word-wrap: break-word;
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
+/* 全体のリセット */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Noto Serif JP", serif; /* 明朝体またはセリフ体 */
+	background-color: #fdfdfd; /* やや白に近い背景色 */
+	color: #333; /* 文字は濃い灰色 */
+	line-height: 1.8; /* 行間を広めに */
+	padding: 20px;
+	font-size: 16px;
+  }
+  
+  /* ヘッダー */
+  header {
+	background-color: #283593; /* 深い青 */
 	color: white;
-	margin: 16px;
+	padding: 15px 20px;
 	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
+	font-size: 24px;
+	font-weight: bold;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header a {
+	color: white;
 	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
+  }
+  
+  header a:hover {
 	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
-h1, h2, h3 {
-	font-weight: normal;
-}
-
-h2 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-
+  }
+  
+  /* メインコンテンツ */
+  main {
+	max-width: 800px;
+	margin: 40px auto; /* 中央寄せ */
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* わずかな影 */
+	border-radius: 5px; /* 角を少し丸く */
+  }
+  
+  /* 見出し */
+  h1, h2, h3 {
+	font-family: "Noto Sans JP", sans-serif; /* 見出しもゴシック体 */
+	color: #283593; /* 深い青 */
+	margin-bottom: 20px;
+  }
+  
+  h1 {
+	font-size: 2em;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+  }
+  
+  h2 {
+	font-size: 1.5em;
+	margin-top: 30px;
+  }
+  
 h3 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+font-size: 1.2em;
+margin-top: 25px;
+font-weight: bold;
+border-left: 4px solid #283593; /* 左側に青い線 */
+padding-left: 10px; /* 左側に余白 */
+}
+  
+  /* リンク */
+  a {
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  /* リスト */
+  ul, ol {
+	margin-left: 20px;
+	padding-left: 10px;
+  }
+  
+  li {
+	margin-bottom: 10px;
+  }
+  
+  /* 引用 */
+  blockquote {
+	border-left: 5px solid #ccc;
+	padding: 10px 20px;
+	margin: 20px 0;
+	background-color: #f9f9f9;
 	font-style: italic;
-	color: #007acc;
-	text-transform: uppercase;
-}
-
-h5 {
-	line-height: 0.3em;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
+	color: #666;
+  }
+  
+  /* フッター */
+  footer {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px 0;
+	font-size: 0.9em;
+	color: #999;
+  }
+  
+  footer a {
+	color: #283593;
+  }
+  
+  footer a:hover {
+	text-decoration: underline;
+  }
+  
+  /* モバイル対応 */
+  @media (max-width: 768px) {
+	body {
+	  padding: 10px;
+	  font-size: 14px;
+	}
+  
+	main {
+	  padding: 15px;
+	}
+  
+	h1 {
+	  font-size: 1.8em;
+	}
+  
+	h2 {
+	  font-size: 1.3em;
+	}
+  }
