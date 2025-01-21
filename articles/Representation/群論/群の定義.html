@@ -177,11 +177,11 @@
 <h3 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h3>
 <p>$G$を任意の集合とする．写像，<br>
 $$<br>
-g:G × G → G<br>
+⋅:G × G → G<br>
 $$<br>
-が与えられ，$a,b,c ∈ G$に対して以下の条件を満たしているとき，$(G,g)$を<strong>群</strong>（group）と呼ぶ．ただし，混乱のないときは単に群を$G$と表記し，<br>
+が与えられ，$a,b,c ∈ G$に対して以下の条件を満たしているとき，$(G,⋅)$を<strong>群</strong>（group）と呼ぶ．ただし，混乱のないときは単に群を$G$と表記し，<br>
 $$<br>
-g(a,b) → ab<br>
+a⋅b → ab<br>
 $$<br>
 と略記する．</p>
 <ol>
@@ -214,14 +214,20 @@ ab^{-1} = a - b ∈ n\mathbb{Z}<br>
 $$<br>
 となるので，部分群であるための必要十分条件を確かに満たしている．</p>
 <h2 id="%E5%8F%AF%E6%8F%9B%E7%BE%A4">可換群</h2>
-<p>群$G$の任意の元$a,b$に対して，</p>
-<p>$$<br>
+<p>群$G$の任意の元$a,b$に対して，<br>
+$$<br>
 ab = ba<br>
-$$</p>
-<p>が成り立つとき，$G$を<strong>Abel群</strong>または<strong>可換群</strong>と呼ぶ．</p>
+$$<br>
+が成り立つとき，$G$を<strong>Abel群</strong>または<strong>可換群</strong>と呼ぶ．</p>
+<h2 id="%E6%AD%A3%E8%A6%8F%E9%83%A8%E5%88%86%E7%BE%A4">正規部分群</h2>
+<p>群$H$を群$G$の部分群とする．すべての$g ∈ G, h ∈ H$に対して，<br>
+$$<br>
+ghg^{-1} ∈ H<br>
+$$<br>
+となるとき，$H$を$G$の<strong>正規部分群</strong>といい，$H ◃ G$あるいは$G ▹ H$と書く．</p>
 
 
-<div style="text-align: center;">
+<div style="text-align: center; margin-top: 20px;">
 	<button class="button before" onclick="goToBefore()">前の記事</button>
 	<button class="home-button top" onclick="goToBack()">戻る</button>
 	<button class="button next" onclick="goToNext()">次の記事</button>
@@ -240,7 +246,7 @@ $$</p>
 
 	function goToBack() {
 		// 移動先のURLを指定
-		window.location.href = "../../contents/Representation.html"; 
+		window.location.href = "../../../contents/Representation.html"; 
 	}
 </script>
 
@@ -251,7 +257,7 @@ $$</p>
   <script>
     function goToHome() {
       // 移動先のURLを指定
-      window.location.href = "../../index.html"; 
+      window.location.href = "../../../index.html"; 
     }
   </script>
 
