@@ -384,9 +384,10 @@ code {
     });
   </script>
 <h1 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h1>
-<p>ここではまず，簡単な群の定義を与える．</p>
+<h2 id="%E5%AE%9A%E7%BE%A9">定義</h2>
+<p>ここではまず，群の定義を与える．</p>
 <blockquote>
-<h2 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h2>
+<h3 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h3>
 <p>$G$を任意の集合とする．写像，<br>
 $$<br>
 g:G × G → G<br>
@@ -415,13 +416,23 @@ $$</p>
 aa^{-1} = a^{-1}a = e<br>
 $$</p>
 </blockquote>
+<p>群の例を考える．最も簡単な群の例の1つは，整数全体の集合と加法の組$(\mathbb{Z},+)$である．このとき，単位元は$0$で，逆元は$a ∈ \mathbb{Z}$に対して$-a$である．</p>
+<h2 id="%E4%BD%8D%E6%95%B0">位数</h2>
 <p>群$G$に含まれる元の個数を$G$の<strong>位数</strong>（order）という．</p>
+<h2 id="%E9%83%A8%E5%88%86%E7%BE%A4">部分群</h2>
 <p>群$G$の部分集合$H$もまた$G$で与えられた乗法によって群となるとき，$H$を$G$の<strong>部分群</strong>（subgroup）という．$H$が$G$の部分群であるための必要十分条件は，$H$の任意の元$a,b$に対して$ab^{-1}$もまた$H$の群になることである．</p>
+<p>部分群の具体例を考える．$n$の倍数の集合である$(n\mathbb{Z},+)$は$(\mathbb{Z},+)$の部分群である．なぜならば，$a,b ∈ n\mathbb{Z}$を考えたとき，<br>
+$$<br>
+ab^{-1} = a - b<br>
+$$
+であるが，$a-b ∈ n\mathbb{Z}$であるので，確かに部分群になっている．</p>
+<h2 id="%E5%8F%AF%E6%8F%9B%E7%BE%A4">可換群</h2>
 <p>群$G$の任意の元$a,b$に対して，</p>
 <p>$$<br>
 ab = ba<br>
 $$</p>
 <p>が成り立つとき，$G$を<strong>Abel群</strong>または<strong>可換群</strong>と呼ぶ．</p>
+
 
 <div style="text-align: center;">
 	<button class="button before" onclick="goToBefore()">前の記事</button>
@@ -437,7 +448,7 @@ $$</p>
 
 	function goToNext() {
 		// 移動先のURLを指定
-		window.location.href = "./群準同型と群同型.html"; 
+		window.location.href = ""; 
 	}
 
 	function goToBack() {
