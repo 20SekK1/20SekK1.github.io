@@ -148,7 +148,7 @@ padding-left: 10px; /* 左側に余白 */
   @media (max-width: 768px) {
 	body {
 	  padding: 10px;
-	  font-size: 14px;
+	  font-size: 16px;
 	}
   
 	main {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>群の定義.md</title>
+<title>群.md</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -124,7 +124,7 @@
   @media (max-width: 768px) {
 	body {
 	  padding: 10px;
-	  font-size: 14px;
+	  font-size: 16px;
 	}
   
 	main {
@@ -170,7 +170,7 @@
           : 'default'
     });
   </script>
-<h1 id="%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">群の定義</h1>
+<h1 id="%E7%BE%A4">群</h1>
 <h2 id="%E5%AE%9A%E7%BE%A9">定義</h2>
 <p>ここではまず，群の定義を与える．</p>
 <blockquote>
@@ -206,9 +206,11 @@ $$</p>
 <p>群の例を考える．最も簡単な群の例の1つは，整数全体の集合と加法の組$(\mathbb{Z},+)$である．このとき，単位元は$0$で，逆元は$a ∈ \mathbb{Z}$に対して$-a$である．</p>
 <h2 id="%E4%BD%8D%E6%95%B0">位数</h2>
 <p>群$G$に含まれる元の個数を$G$の<strong>位数</strong>（order）という．</p>
+<p>位数が有限の群を<strong>有限群</strong>といい，そうでない群を<strong>無限群</strong>という．</p>
 <h2 id="%E9%83%A8%E5%88%86%E7%BE%A4">部分群</h2>
-<p>群$G$の部分集合$H$もまた$G$で与えられた乗法によって群となるとき，$H$を$G$の<strong>部分群</strong>（subgroup）という．$H$が$G$の部分群であるための必要十分条件は，$H$の任意の元$a,b$に対して$ab^{-1}$もまた$H$の群になることである．</p>
-<p>部分群の具体例を考える．$n$の倍数の集合である$(n\mathbb{Z},+)$は$(\mathbb{Z},+)$の部分群である．実際に$a,b ∈ n\mathbb{Z}$を考えたとき，<br>
+<p>群$G$の部分集合$H$もまた$G$で与えられた乗法によって群となるとき，$H$を$G$の<strong>部分群</strong>（subgroup）という．$H$が$G$の部分群であるための必要十分条件は，$H$の任意の元$a,b$に対して$ab^{-1}$もまた$H$の群になることである．<br>
+<br><br>
+部分群の具体例を考える．$n$の倍数の集合である$(n\mathbb{Z},+)$は$(\mathbb{Z},+)$の部分群である．実際に$a,b ∈ n\mathbb{Z}$を考えたとき，<br>
 $$<br>
 ab^{-1} = a - b ∈ n\mathbb{Z}<br>
 $$<br>
