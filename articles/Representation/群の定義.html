@@ -138,6 +138,13 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
+h2 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
 table {
 	border-collapse: collapse;
 }
@@ -308,6 +315,13 @@ pre code {
  * Markdown PDF CSS
  */
 
+/* 
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+*/
+
 pre {
 	background-color: #f8f8f8;
 	border: 1px solid #cccccc;
@@ -419,7 +433,7 @@ $$</p>
 <p>部分群の具体例を考える．$n$の倍数の集合である$(n\mathbb{Z},+)$は$(\mathbb{Z},+)$の部分群である．なぜならば，$a,b ∈ n\mathbb{Z}$を考えたとき，<br>
 $$<br>
 ab^{-1} = a - b<br>
-$$
+$$<br>
 であるが，$a-b ∈ n\mathbb{Z}$であるので，確かに部分群になっている．</p>
 <h2 id="%E5%8F%AF%E6%8F%9B%E7%BE%A4">可換群</h2>
 <p>群$G$の任意の元$a,b$に対して，</p>
