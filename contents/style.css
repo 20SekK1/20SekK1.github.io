@@ -100,7 +100,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:focus ,
+a:focus,
 input:focus,
 select:focus,
 textarea:focus {
@@ -125,12 +125,25 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
+h2 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
 h3 {
-	padding: 10px;
-	background: linear-gradient(135deg, #4c81d8 0%, #c2e9fb 100%);
-	border-radius: 5px;
-	color: #333;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	font-style: italic;
+	color: #007acc;
+	text-transform: uppercase;
+}
+
+h5 {
+	line-height: 0.3em;
 }
 
 table {

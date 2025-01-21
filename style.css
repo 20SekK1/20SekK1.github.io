@@ -100,10 +100,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-a:link {
-	color: #0675cb;
-}
-
 a:focus,
 input:focus,
 select:focus,
@@ -127,6 +123,27 @@ h1 {
 
 h1, h2, h3 {
 	font-weight: normal;
+}
+
+h3 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	font-style: italic;
+	color: #007acc;
+	text-transform: uppercase;
+}
+
+h5 {
+	line-height: 0.3em;
+}
+
+h2 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 }
 
 table {
