@@ -223,7 +223,106 @@ $$<br>
 $$<br>
 となる．</p>
 </blockquote>
-<p>次に，互換を定義する．この概念は交代群を定義するために必要である．</p>
+<p>ここで，具体例を考える．$4$次の置換として，<br>
+$$<br>
+σ=<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+1 &amp; 4 &amp; 2 &amp; 3<br>
+\end{array}<br>
+\right)<br>
+$$<br>
+を考えると，この写像は，$1$を$1$に，$2$を$4$に，$3$を$2$に，$4$を$1$に移す．<br>
+<br><br>
+更に<br>
+$$<br>
+τ=<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+2 &amp; 3 &amp; 4 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+$$<br>
+という置換を考えると，積は<br>
+$$<br>
+\begin{align*}<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+1 &amp; 4 &amp; 2 &amp; 3<br>
+\end{array}<br>
+\right)\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+2 &amp; 3 &amp; 4 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\end{align*}<br>
+$$<br>
+とかけるが，<br>
+$$<br>
+\begin{gather*}<br>
+1 → τ(1) = 2 → σ(2) = 4 \cr<br>
+2 → τ(2) = 3 → σ(3) = 2 \cr<br>
+3 → τ(3) = 4 → σ(4) = 3 \cr<br>
+4 → τ(4) = 1 → σ(1) = 1<br>
+\end{gather*}<br>
+$$<br>
+に移すので，<br>
+$$<br>
+\begin{align*}<br>
+στ=<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+1 &amp; 4 &amp; 2 &amp; 3<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+2 &amp; 3 &amp; 4 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\cr<br>
+=\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+4 &amp; 2 &amp; 3 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\end{align*}<br>
+$$<br>
+とかける．なお，置換は可換ではない．実際に計算すると，<br>
+$$<br>
+\begin{align*}<br>
+τσ=<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+2 &amp; 3 &amp; 4 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+1 &amp; 4 &amp; 2 &amp; 3<br>
+\end{array}<br>
+\right)<br>
+\cr<br>
+=\left(<br>
+\begin{array}{cccc}<br>
+1 &amp; 2 &amp; 3 &amp; 4 \cr<br>
+2 &amp; 1 &amp; 3 &amp; 4<br>
+\end{array}<br>
+\right)≠στ<br>
+\end{align*}<br>
+$$<br>
+となり，一致しない．<br>
+<br><br>
+次に，互換を定義する．この概念は交代群を定義するために必要である．</p>
 <h2 id="%E5%AF%BE%E7%A7%B0%E7%BE%A4">対称群</h2>
 <h2 id="%E7%BD%AE%E6%8F%9B%E7%BE%A4">置換群</h2>
 <h2 id="%E4%BA%A4%E4%BB%A3%E7%BE%A4">交代群</h2>
