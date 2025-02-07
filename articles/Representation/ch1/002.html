@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>群の例.md</title>
+<title>002.md</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -194,7 +194,7 @@ $$<br>
 &amp; i   &amp; ↦  &amp; σ(i)<br>
 \end{array}<br>
 $$<br>
-のことを$I_n$の<strong>置換</strong>(permutaion)という．$σ$は，<br>
+のことを$I_n$の<strong>置換</strong>(permutation)という．$σ$は，<br>
 $$<br>
 σ=\left(<br>
 \begin{array}{cccc}<br>
@@ -335,10 +335,163 @@ $$<br>
 次に，互換を定義する．この概念は交代群を定義するために必要である．</p>
 <blockquote>
 <h3 id="%E4%BA%92%E6%8F%9B%E3%81%AE%E5%AE%9A%E7%BE%A9">互換の定義</h3>
+<p>$1 ≤ i &lt; j ≤ n$とする．このとき，$l ≠ i,j$であれば$σ(l) = l$で$σ(i) = j$，$σ(j)=i$であるとき$σ$は置換で，このような置換を$i,j$の<strong>互換</strong>と言い$(i,j)$と書く．</p>
 </blockquote>
+<p>互換はつまり，2つの数字$i,j$の入れ替えを示す．</p>
+<p>もっと一般には，巡回置換という概念が存在している．</p>
+<blockquote>
+<h3 id="%E5%B7%A1%E5%9B%9E%E7%BD%AE%E6%8F%9B%E3%81%AE%E5%AE%9A%E7%BE%A9">巡回置換の定義</h3>
+<p>$1 ≤ i_1, ⋯ , i_m ≤ n$を全て異なる整数とするとき，<br>
+$$<br>
+\begin{gather*}<br>
+i_1 → i_2 \cr<br>
+i_2 → i_3 \cr<br>
+⋮ \cr<br>
+i_{m-1} → i_m \cr<br>
+i_m → i_1<br>
+\end{gather*}<br>
+$$<br>
+と移し，他を変えないような置換を$(i_1\quad i_2\quad ⋯\quad i_m)$と書き，長さ$m$の<strong>巡回置換</strong>と言う．</p>
+</blockquote>
+<p>巡回置換は互換の積で（一意的とは限らないが）書けることが知られている．つまり，<br>
+$$<br>
+\begin{align*}<br>
+(i_1\quad i_2\quad ⋯\quad i_m)<br>
+&amp;= (i_1\quad i_2)(i_2\quad i_3)⋯(i_{m-1}\quad i_m) \cr<br>
+&amp;= (i_{m-1}\quad i_m)(i_{m-2}\quad i_m)⋯(i_1\quad i_m)<br>
+\end{align*}<br>
+$$<br>
+などのように，何らかの形で分解できる．つまり，任意の置換は何個かの互換の積になっている．</p>
+<blockquote>
+<h3 id="%E7%BD%AE%E6%8F%9B%E3%81%AE%E7%AC%A6%E5%8F%B7%E3%81%AE%E5%AE%9A%E7%BE%A9">置換の符号の定義</h3>
+<p>$σ$が$m$個の互換の積になっているとき，<strong>置換の符号</strong>$\text{sgn}(σ)$を，<br>
+$$<br>
+\begin{equation*}<br>
+\text{sgn}(σ) := (-1)^m<br>
+=\left\lbrace<br>
+\begin{array}{cc}<br>
+1 &amp; (mが偶数) \cr<br>
+-1 &amp; (mが奇数)<br>
+\end{array}<br>
+\right.<br>
+\end{equation*}<br>
+$$<br>
+と定める．</p>
+<p>$\text{sgm}(σ) = 1$であるような置換を<strong>偶置換</strong>，$\text{sgm}(σ) = -1$であるような置換を<strong>奇置換</strong>という．</p>
+</blockquote>
+<p>長さ$m$の巡回置換は$m-1$個の互換の積に分解できるので，$\text{sgn}(σ) = (-1)^{m-1}$である．</p>
 <h2 id="%E5%AF%BE%E7%A7%B0%E7%BE%A4">対称群</h2>
+<blockquote>
+<h3 id="%E5%AF%BE%E7%A7%B0%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">対称群の定義</h3>
+<p>$n$個の数字の集合$I_n = \lbrace 1,2,\ldots,n\rbrace$の上の置換の全体からなる群を，$\mathfrak{S}_n$と書き，<strong>n次対称群</strong>と言う．</p>
+</blockquote>
+<p>例えば，2次対称群$\mathfrak{S}_2$の元は，<br>
+$$<br>
+\begin{equation*}<br>
+e = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 \cr<br>
+1 &amp; 2<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+σ = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 \cr<br>
+2 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\end{equation*}<br>
+$$<br>
+であり，3次元対称群$\mathfrak{S}_3$の元は，<br>
+$$<br>
+\begin{gather*}<br>
+e = \left(<br>
+\begin{array}{ccc}<br>
+1 &amp; 2 &amp; 3 \cr<br>
+1 &amp; 2 &amp; 3<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+τ_1 = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 &amp; 3 \cr<br>
+2 &amp; 3 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+τ_2 = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 &amp; 3 \cr<br>
+3 &amp; 1 &amp; 2<br>
+\end{array}<br>
+\right)<br>
+\cr<br>
+σ_1 = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 &amp; 3 \cr<br>
+2 &amp; 1 &amp; 3<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+σ_2 = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 &amp; 3 \cr<br>
+3 &amp; 2 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+σ_3 = \left(<br>
+\begin{array}{cc}<br>
+1 &amp; 2 &amp; 3 \cr<br>
+1 &amp; 3 &amp; 2<br>
+\end{array}<br>
+\right)<br>
+\end{gather*}<br>
+$$<br>
+である．この例からも分かるように，n次対称群の位数は$n!$である．</p>
 <h2 id="%E7%BD%AE%E6%8F%9B%E7%BE%A4">置換群</h2>
+<blockquote>
+<h3 id="%E7%BD%AE%E6%8F%9B%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">置換群の定義</h3>
+<p>対称群の部分群を，<strong>置換群</strong>(permutation group)と言う．</p>
+</blockquote>
 <h2 id="%E4%BA%A4%E4%BB%A3%E7%BE%A4">交代群</h2>
+<blockquote>
+<h3 id="%E4%BA%A4%E4%BB%A3%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">交代群の定義</h3>
+<p>$\mathfrak{S}_n$の偶置換の全体$\mathfrak{A}_n$は部分群をなし，<strong>n次交代群</strong>と呼ぶ．</p>
+</blockquote>
+<p>具体例として，$\mathfrak{A}_3$を考える．今3次元対称群$\mathfrak{S}_3$の元は，<br>
+$$<br>
+\begin{gather*}<br>
+e<br>
+\qquad<br>
+τ_1<br>
+=(1\quad 2\quad 3)<br>
+=(1\quad 2)(2\quad 3)<br>
+\qquad<br>
+τ_2<br>
+=(1\quad 3\quad 2)<br>
+=(1\quad 3)(3\quad 2)<br>
+\cr<br>
+σ_1<br>
+=(1\quad 2)<br>
+\qquad<br>
+σ_2<br>
+=(1\quad 3)<br>
+\qquad<br>
+σ_3<br>
+=(2\quad 3)<br>
+\end{gather*}<br>
+$$<br>
+であるから，偶置換であるものを選べば，$\mathfrak{A}_3$の元は，<br>
+$$<br>
+\begin{equation*}<br>
+e \quad τ_1 \quad τ_2<br>
+\end{equation*}<br>
+$$<br>
+であることが分かる．<br>
+<br><br>
+奇置換の全体からなる群はないのだろうかと考えるかもしれないが，奇置換の集合には$e$が含まれておらず，単位元が存在しないので群の定義を満たさない．従ってこのような群は存在しえないことが分かる．</p>
 
 
 <div style="text-align: center; margin-top: 20px;">
@@ -350,7 +503,7 @@ $$<br>
 <script>
 	function goToBefore() {
 		// 移動先のURLを指定
-		window.location.href = ""; 
+		window.location.href = "./001.html"; 
 	}
 
 	function goToNext() {
