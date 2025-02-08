@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>003.md</title>
+<title>004.md</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -170,63 +170,56 @@
           : 'default'
     });
   </script>
-<h1 id="%E5%90%8C%E5%80%A4%E9%A1%9E%E3%81%A8%E5%95%86%E9%9B%86%E5%90%88">同値類と商集合</h1>
+<h1 id="%E5%89%B0%E4%BD%99%E9%A1%9E%E3%81%A8%E5%89%B0%E4%BD%99%E7%BE%A4">剰余類と剰余群</h1>
+<h2 id="%E5%89%B0%E4%BD%99%E9%A1%9E">剰余類</h2>
+<blockquote>
+<p>剰余類の定義</p>
+<p>$H$を群$G$の部分群とする．また，$a,b ∈ G$とする．</p>
 <ol>
-<li><a href="#%E5%90%8C%E5%80%A4%E9%A1%9E%E3%81%A8%E5%95%86%E9%9B%86%E5%90%88">同値類と商集合</a>
-<ol>
-<li><a href="#%E5%90%8C%E5%80%A4%E9%96%A2%E4%BF%82">同値関係</a></li>
-<li><a href="#%E5%90%8C%E5%80%A4%E9%A1%9E">同値類</a></li>
-<li><a href="#%E5%95%86%E9%9B%86%E5%90%88">商集合</a></li>
-<li><a href="#%E4%BE%8B">例</a></li>
-</ol>
+<li>
+<p>$a^{-1}b ∈ H$であるとき，$a ∼ b$と定義する．これは同値関係となる．このとき，$a ∈ G$の同値類を$aH$と書き，$a$の$H$による<strong>左剰余類</strong>というこの同値類の商集合を$G/H$と書く．</p>
+</li>
+<li>
+<p>$ba^{-1} ∈ H$であるとき，$a ∼ b$と定義する．これは同値関係となる．このとき，$a ∈ G$の同値類を$Ha$と書き，$a$の$H$による<strong>右剰余類</strong>というこの同値類の商集合を$G\backslash H$と書く．</p>
 </li>
 </ol>
-<h2 id="%E5%90%8C%E5%80%A4%E9%96%A2%E4%BF%82">同値関係</h2>
-<blockquote>
-<h3 id="%E5%90%8C%E5%80%A4%E9%96%A2%E4%BF%82%E3%81%AE%E5%AE%9A%E7%BE%A9">同値関係の定義</h3>
-<p>集合$S$上の関係$∼$が次の条件を満たすとき，$∼$を<strong>同値関係</strong>という．以下，$a,b,c ∈ S$とする．</p>
-<ol>
-<li>（反射律）：$a ∼ a$</li>
-<li>（対称律）：$a ∼ b$ならば$b ∼ a$</li>
-<li>（推移律）：$a ∼ b$，$b ∼ c$ならば$a ∼ c$</li>
-</ol>
 </blockquote>
-<p>例えば，等号$=$は，最も簡単な同値関係の例である．<br>
+<p>$G$がアーベル群であれば，左剰余類と右剰余類は区別がなく，単に剰余類という．<br>
 <br><br>
-また，$a ≡ b\mod{n}$と書かれるような法$≡$は同値関係の例である．</p>
-<h2 id="%E5%90%8C%E5%80%A4%E9%A1%9E">同値類</h2>
+また，$H$が正規部分群であるとき，$gH=Hg$が成り立つ．つまり左剰余類と右剰余類は集合として一致している．<br>
+<br><br>
+例を確認していくことにする．$\mathfrak{S}_3$を3次対称群とし，$\mathfrak{H}=\lbrace e, (12)\rbrace$をその部分群とする．このとき，例えば$(13) ∈ \mathfrak{S}_3$に対し，<br>
+$$<br>
+\begin{gather*}<br>
+(13)\mathfrak{H} = \lbrace (13), (123) \rbrace \cr<br>
+\mathfrak{H}(13) = \lbrace (13), (132) \rbrace<br>
+\end{gather*}<br>
+$$<br>
+はそれぞれ$(13)$の$\mathfrak{H}$による左剰余類，右剰余類である．</p>
+<h2 id="%E5%89%B0%E4%BD%99%E7%BE%A4">剰余群</h2>
 <blockquote>
-<h3 id="%E5%90%8C%E5%80%A4%E9%A1%9E%E3%81%AE%E5%AE%9A%E7%BE%A9">同値類の定義</h3>
-<p>$∼$を集合$S$上の同値関係とする．$a ∈ S$に対し，<br>
+<h3 id="%E5%89%B0%E4%BD%99%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">剰余群の定義</h3>
+<p>$G$を群，$H ⊂ G$を正規部分群とする．このとき，$G/H$の2つの元を，$g_1H,g_2H$（$g_1,g_2 ∈ G$）と表す．このとき積を，<br>
 $$<br>
 \begin{equation*}<br>
-[a] =\left\lbrace b ∈ S \left| b ∼ a \right.\right\rbrace<br>
+(g_1H)(g_2H) = g_1g_2H<br>
 \end{equation*}<br>
 $$<br>
-を，$a$の<strong>同値類</strong>という．</p>
+と定義すると，$G/H$はこの演算により群を成し，<strong>剰余群</strong>，または<strong>商群</strong>と呼ぶ．</p>
 </blockquote>
-<p>同値類に関して，次の定理が成り立つことが知られている．</p>
-<blockquote>
-<h3 id="%E5%AE%9A%E7%90%86">定理</h3>
-<p>$∼$を集合$S$上の同値関係，$[a]$を$a ∈ S$の同値類とする．このとき，以下が成り立つ．</p>
-<ol>
-<li>任意の$b,c ∈ [a]$に対して，$b ∼ c$</li>
-<li>もし$b ∈ [a]$ならば，$[a] = [b]$</li>
-<li>もし$a,b ∈ S$で$[a] ∩ [b] ≠ ∅$ならば，$[a] = [b]$</li>
-</ol>
-</blockquote>
-<h2 id="%E5%95%86%E9%9B%86%E5%90%88">商集合</h2>
-<blockquote>
-<p>商集合の定義</p>
-<p>全ての同値類からなる集合を<strong>商集合</strong>と呼び，$S/∼$と書く．<br>
-また，$[a]$の任意の元を，同値類$[a]$の<strong>代表元</strong>と呼ぶ．</p>
-</blockquote>
-<h2 id="%E4%BE%8B">例</h2>
-<p>この節で定義された概念について，具体例を見る．<br>
-<br><br>
-整数全体の集合$\mathbb{Z}$を考えると，$2$を法とする$≡ \mod{2}$は同値関係であり，同値類は$[0]$および$[1]$である．$[0]$の元としては，例えば$0,2,4,\ldots$が，$[1]$の元としては例えば$1,3,5,\ldots$が存在する．<br>
-<br><br>
-一般に，$n ∈ \mathbb{Z}/\lbrace0\rbrace$を法とする$≡ \mod{n}$は同値関係であり，同値類は$[0],[1],\ldots,[n-1]$となり，この同値類からなる商集合を$\mathbb{Z}/n\mathbb{Z}$などと書く．</p>
+<p>この定義が，代表元$g_1,g_2$の取り方によらないことを確認するのは重要である．$g_1H,g_2H$の任意の元は，$h,h' ∈ H$を用いてそれぞれ$g_1h,g_2h'$と書くことができる．このとき，<br>
+$$<br>
+\begin{equation*}<br>
+(g_1h)(g_2h') = g_1g_2g_2^{-1}hg_2h'<br>
+\end{equation*}<br>
+$$<br>
+と書けるが，$H$は正規部分群なので，$g_2^{-1}hg_2 ∈ H$であり，群の演算が閉じていることを考慮すると，$g_2^{-1}hg_2h' ∈ H$である．したがって，これを改めて$h'' := g_2^{-1}hg_2h' ∈ H$と置くと，<br>
+$$<br>
+\begin{equation*}<br>
+(g_1h)(g_2h') = g_1g_2h''<br>
+\end{equation*}<br>
+$$<br>
+となるので，確かに定義通りに計算でき，この過程の中で代表元の取り方に依存する箇所はないので，この定義は代表元の取り方によらないことが確認できた．</p>
 
 
 <div style="text-align: center; margin-top: 20px;">
@@ -238,12 +231,12 @@ $$<br>
 <script>
 	function goToBefore() {
 		// 移動先のURLを指定
-		window.location.href = "./002.html"; 
+		window.location.href = "./003.html"; 
 	}
 
 	function goToNext() {
 		// 移動先のURLを指定
-		window.location.href = "./004.html"; 
+		window.location.href = ""; 
 	}
 
 	function goToBack() {
