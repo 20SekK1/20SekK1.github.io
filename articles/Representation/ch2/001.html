@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>001.md</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* 全体のリセット */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Noto Serif JP", serif; /* 明朝体またはセリフ体 */
+	background-color: #fdfdfd; /* やや白に近い背景色 */
+	color: #333; /* 文字は濃い灰色 */
+	line-height: 1.8; /* 行間を広めに */
+	padding: 20px;
+	font-size: 16px;
+  }
+  
+  /* ヘッダー */
+  header {
+	background-color: #283593; /* 深い青 */
+	color: white;
+	padding: 15px 20px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header a {
+	color: white;
+	text-decoration: none;
+  }
+  
+  header a:hover {
+	text-decoration: underline;
+  }
+  
+  /* メインコンテンツ */
+  main {
+	max-width: 800px;
+	margin: 40px auto; /* 中央寄せ */
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* わずかな影 */
+	border-radius: 5px; /* 角を少し丸く */
+  }
+  
+  /* 見出し */
+  h1, h2, h3 {
+	font-family: "Noto Sans JP", sans-serif; /* 見出しもゴシック体 */
+	color: #283593; /* 深い青 */
+	margin-bottom: 20px;
+  }
+  
+  h1 {
+	font-size: 2em;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+  }
+  
+  h2 {
+	font-size: 1.5em;
+	margin-top: 30px;
+  }
+  
+  h3 {
+	font-size: 1.2em;
+  }
+  
+  /* リンク */
+  a {
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  /* リスト */
+  ul, ol {
+	margin-left: 20px;
+	padding-left: 10px;
+  }
+  
+  li {
+	margin-bottom: 10px;
+  }
+  
+  /* 引用 */
+  blockquote {
+	border-left: 5px solid #ccc;
+	padding: 10px 20px;
+	margin: 20px 0;
+	background-color: #f9f9f9;
+	font-style: italic;
+	color: #666;
+  }
+  
+  /* フッター */
+  footer {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px 0;
+	font-size: 0.9em;
+	color: #999;
+  }
+  
+  footer a {
+	color: #283593;
+  }
+  
+  footer a:hover {
+	text-decoration: underline;
+  }
+  
+  /* モバイル対応 */
+  @media (max-width: 768px) {
+	body {
+	  padding: 10px;
+	  font-size: 16px;
+	}
+  
+	main {
+	  padding: 15px;
+	}
+  
+	h1 {
+	  font-size: 1.8em;
+	}
+  
+	h2 {
+	  font-size: 1.3em;
+	}
+  }
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<!--ここから追記 1.(数式に対応させる)-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+    },
+      messageStyle: "none",
+      "HTML-CSS": {
+        availableFonts: ["TeX"],  <!-- 使用するフォントを TeX に設定 -->
+        webFont: "TeX" <!-- Web フォントも TeX を利用 -->
+      }
+    });
+</script>
+<!--追記 1.ここまで-->
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<ol>
+<li><a href="#%E7%BE%A4%E3%81%AE%E8%A1%A8%E7%8F%BE">群の表現</a>
+<ol>
+<li><a href="#%E4%B8%80%E8%88%AC%E7%B7%9A%E5%BD%A2%E7%BE%A4">一般線形群</a></li>
+<li><a href="#%E8%A1%A8%E7%8F%BE">表現</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="%E7%BE%A4%E3%81%AE%E8%A1%A8%E7%8F%BE">群の表現</h1>
+<p>ここまで群の定義を見てきたが，群は条件を満たしさえすればどのようなものでも良い．そこで，例えばある&quot;操作”を考えた時，2つの操作を続けて行うことを積と定義することで群を構成する．この群の構造を理解する際には，その操作を具体的に&quot;表現&quot;する必要がある．それこそが群の表現である．</p>
+<p>ここで，話を抽象化させるとベクトル空間の中での線形変換として群を議論することに帰着する．</p>
+<h2 id="%E4%B8%80%E8%88%AC%E7%B7%9A%E5%BD%A2%E7%BE%A4">一般線形群</h2>
+<blockquote>
+<h3 id="%E7%B7%9A%E5%BD%A2%E5%A4%89%E6%8F%9B%E3%81%AE%E5%AE%9A%E7%BE%A9">線形変換の定義</h3>
+<p>$V$と$W$を同じ体$\mathbb{K}$（例えば複素数全体の集合$\mathbb{C}$）の上のベクトル空間とする．今，任意のベクトル$\vec{x},\vec{y}$および$a,b ∈ \mathbb{K}$に対し，<br>
+$$<br>
+\begin{equation*}<br>
+T(a\vec{x}+b\vec{y}) = aT(\vec{x}) + bT(\vec{y})<br>
+\end{equation*}<br>
+$$<br>
+を満たすような$T$を，$\mathbb{K}$上の<strong>線形写像</strong>(linear operator)や，<strong>線形変換</strong>(linear transformation)と呼ぶ．</p>
+</blockquote>
+<p>以下，体は$\mathbb{C}$を考えるものとする．<br>
+<br><br>
+任意の$\vec{x} ∈ V$は1次独立な$n$個のベクトル$\lbrace \vec{a_i} \rbrace_{i=1,\ldots,n}$の1次結合で表されるとするならば，<br>
+$$<br>
+\begin{equation*}<br>
+\vec{x} = ∑_i x_i\vec{a_i}<br>
+\end{equation*}<br>
+$$<br>
+と書けるとする．今，線形変換によって基底は同じベクトル空間内のベクトルに変換される．従って，変換された基底$T(\vec{a_k})$はこの基底の1次結合で表されるから，<br>
+$$<br>
+\begin{equation*}<br>
+T(\vec{a_k}) = ∑_i\vec{a_i}T_{ik}<br>
+\end{equation*}<br>
+$$<br>
+となる．1次結合の係数$T_{ik}$を行列要素とするような$n×n$行列を1次変換$T$の変換行列と呼び，記号の乱用ではあるが同じ記号$T$で表す．</p>
+<p>この変換によりベクトル$\vec{x}$は，<br>
+$$<br>
+\begin{align*}<br>
+\vec{x}'<br>
+&amp;=∑_ix_i'\vec{a}_i \cr<br>
+\vec{x}'&amp;=T\vec{x} = T\left(∑_k x_k\vec{a_k}\right)<br>
+\end{align*}<br>
+$$</p>
+<h2 id="%E8%A1%A8%E7%8F%BE">表現</h2>
+
+
+<div style="text-align: center; margin-top: 20px;">
+	<button class="button before" onclick="goToBefore()">前の記事</button>
+	<button class="home-button top" onclick="goToBack()">戻る</button>
+	<button class="button next" onclick="goToNext()">次の記事</button>
+</div>
+
+<script>
+	function goToBefore() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToNext() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToBack() {
+		// 移動先のURLを指定
+		window.location.href = "../../../contents/Representation.html"; 
+	}
+</script>
+
+<div style="text-align: center;">
+    <button class="home-button top" onclick="goToHome()">Home</button>
+  </div>
+  
+  <script>
+    function goToHome() {
+      // 移動先のURLを指定
+      window.location.href = "../../../index.html"; 
+    }
+  </script>
+
+</body>
+</html>
