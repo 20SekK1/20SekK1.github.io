@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>004.md</title>
+<title>006.md</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -170,64 +170,46 @@
           : 'default'
     });
   </script>
-<h1 id="%E5%89%B0%E4%BD%99%E9%A1%9E%E3%81%A8%E5%89%B0%E4%BD%99%E7%BE%A4">剰余類と剰余群</h1>
+<h1 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C">シューアの補題</h1>
 <ol>
-<li><a href="#%E5%89%B0%E4%BD%99%E9%A1%9E%E3%81%A8%E5%89%B0%E4%BD%99%E7%BE%A4">剰余類と剰余群</a>
+<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C">シューアの補題</a>
 <ol>
-<li><a href="#%E5%89%B0%E4%BD%99%E9%A1%9E">剰余類</a></li>
-<li><a href="#%E5%89%B0%E4%BD%99%E7%BE%A4">剰余群</a></li>
+<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B0">シューアの補題Ⅰ</a></li>
+<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B1">シューアの補題Ⅱ</a></li>
 </ol>
 </li>
 </ol>
-<h2 id="%E5%89%B0%E4%BD%99%E9%A1%9E">剰余類</h2>
+<p>ここでは，表現の既約性に関する定理としてシューアの補題を説明する．</p>
+<h2 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B0">シューアの補題Ⅰ</h2>
 <blockquote>
-<p>剰余類の定義</p>
-<p>$H$を群$G$の部分群とする．また，$a,b ∈ G$とする．</p>
+<h3 id="%E8%A3%9C%E9%A1%8C%E2%85%B0">補題Ⅰ</h3>
+<p>$(D_1,V_1)$，$(D_2,V_2)$をそれぞれ群$G$の既約表現とする．このとき，線形変換$A$が繋絡作用素，つまり全ての$g ∈ G$に対して，<br>
+$$<br>
+\begin{equation*}<br>
+AD_1(g) = D_2(g)A<br>
+\end{equation*}<br>
+$$<br>
+を満たすならば，$A$は$A=0$か$V_1$から$V_2$への同型写像である．</p>
+<blockquote>
+<h3 id="%E8%A8%BC%E6%98%8E">証明</h3>
+<p>$A$の核，$\textrm{Ker}A = \left\lbrace x ∈ V_1 \mid Ax=0 \right\rbrace$に属するような元$x$に対して，$AD_1(g)x = D_2(g)Ax = 0$であるから$D_1(g)x ∈ \textrm{Ker}A$である．すなわち$\textrm{Ker}{A}$は表現$D_1$の不変部分空間である．（つまり，$D_1(g)\textrm{Ker}A ⊂ \textrm{Ker}A$）<br>
+ここで，$D_1(g)$は既約表現であったので，不変部分空間は$\textrm{Ker}A = \lbrace 0 \rbrace$あるいは$\textrm{Ker}A = V_1$である．</p>
 <ol>
 <li>
-<p>$a^{-1}b ∈ H$であるとき，$a ∼ b$と定義する．これは同値関係となる．このとき，$a ∈ G$の同値類を$aH$と書き，$a$の$H$による<strong>左剰余類</strong>というこの同値類の商集合を$G/H$と書く．</p>
+<p>$\textrm{Ker}A = V_1$のとき<br>
+任意の$x ∈ V_1$に対して$Ax = 0$を満たすように取るので，このとき$A=0$である．</p>
 </li>
 <li>
-<p>$ba^{-1} ∈ H$であるとき，$a ∼ b$と定義する．これは同値関係となる．このとき，$a ∈ G$の同値類を$Ha$と書き，$a$の$H$による<strong>右剰余類</strong>というこの同値類の商集合を$G\backslash H$と書く．</p>
+<p>$\textrm{Ker}A = \lbrace 0 \rbrace$のとき<br>
+このときは$A ≠ 0$であり，単射である．なぜならば，もし$Ax_1 = Ax_2$を満たすような$x_1,x_2 ∈ V_1$が存在したとすると，式変形により$A(x_1 - x_2) = 0$となるが，これは$(x_1 - x_2) ∈ \textrm{Ker}A$を意味するので矛盾する．さらに，$A$は全射でもある．実際に，$x ∈ V_1$に対して$D_2(g)Ax = AD_1(g)x ∈ V_2$であるから，$A$による$V_1$の像，$AV_1$は表現$D_2(g)$の不変部分空間となる．$D_2(g)$は既約なので，$AV_1 = V_2$．よって，$D_2(g)$の不変部分空間は$\lbrace 0 \rbrace$を除いて$V_2$のみなので，$AV_1 = V_2$となり，これは全射を意味する．以上より，$A$は$V_1$から$V_2$への全単射であることがわかり，$A$は同型写像である．</p>
 </li>
 </ol>
 </blockquote>
-<p>$G$がアーベル群であれば，左剰余類と右剰余類は区別がなく，単に剰余類という．<br>
-<br><br>
-また，$H$が正規部分群であるとき，$gH=Hg$が成り立つ．つまり左剰余類と右剰余類は集合として一致している．<br>
-<br><br>
-例を確認していくことにする．$\mathfrak{S}_3$を3次対称群とし，$\mathfrak{H}=\lbrace e, (12)\rbrace$をその部分群とする．このとき，例えば$(13) ∈ \mathfrak{S}_3$に対し，<br>
-$$<br>
-\begin{gather*}<br>
-(13)\mathfrak{H} = \lbrace (13), (123) \rbrace \cr<br>
-\mathfrak{H}(13) = \lbrace (13), (132) \rbrace<br>
-\end{gather*}<br>
-$$<br>
-はそれぞれ$(13)$の$\mathfrak{H}$による左剰余類，右剰余類である．</p>
-<h2 id="%E5%89%B0%E4%BD%99%E7%BE%A4">剰余群</h2>
-<blockquote>
-<h3 id="%E5%89%B0%E4%BD%99%E7%BE%A4%E3%81%AE%E5%AE%9A%E7%BE%A9">剰余群の定義</h3>
-<p>$G$を群，$H ⊂ G$を正規部分群とする．このとき，$G/H$の2つの元を，$g_1H,g_2H$（$g_1,g_2 ∈ G$）と表す．このとき積を，<br>
-$$<br>
-\begin{equation*}<br>
-(g_1H)(g_2H) = g_1g_2H<br>
-\end{equation*}<br>
-$$<br>
-と定義すると，$G/H$はこの演算により群を成し，<strong>剰余群</strong>，または<strong>商群</strong>と呼ぶ．</p>
 </blockquote>
-<p>この定義が，代表元$g_1,g_2$の取り方によらないことを確認するのは重要である．$g_1H,g_2H$の任意の元は，$h,h' ∈ H$を用いてそれぞれ$g_1h,g_2h'$と書くことができる．このとき，<br>
-$$<br>
-\begin{equation*}<br>
-(g_1h)(g_2h') = g_1g_2g_2^{-1}hg_2h'<br>
-\end{equation*}<br>
-$$<br>
-と書けるが，$H$は正規部分群なので，$g_2^{-1}hg_2 ∈ H$であり，群の演算が閉じていることを考慮すると，$g_2^{-1}hg_2h' ∈ H$である．したがって，これを改めて$h'' := g_2^{-1}hg_2h' ∈ H$と置くと，<br>
-$$<br>
-\begin{equation*}<br>
-(g_1h)(g_2h') = g_1g_2h''<br>
-\end{equation*}<br>
-$$<br>
-となるので，確かに定義通りに計算でき，この過程の中で代表元の取り方に依存する箇所はないので，この定義は代表元の取り方によらないことが確認できた．</p>
+<h2 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B1">シューアの補題Ⅱ</h2>
+<blockquote>
+<p>補題II</p>
+</blockquote>
 
 
 <div style="text-align: center; margin-top: 20px;">
@@ -239,7 +221,7 @@ $$<br>
 <script>
 	function goToBefore() {
 		// 移動先のURLを指定
-		window.location.href = "./003.html"; 
+		window.location.href = ""; 
 	}
 
 	function goToNext() {
