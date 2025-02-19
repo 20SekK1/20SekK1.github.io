@@ -170,46 +170,36 @@
           : 'default'
     });
   </script>
-<h1 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C">シューアの補題</h1>
+<h1 id="%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D%E8%A1%A8%E7%8F%BE">テンソル積表現</h1>
 <ol>
-<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C">シューアの補題</a>
-<ol>
-<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B0">シューアの補題Ⅰ</a></li>
-<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B1">シューアの補題Ⅱ</a></li>
+<li><a href="#%E3%83%86%E3%83%B3%E3%82%BD%E3%83%AB%E7%A9%8D%E8%A1%A8%E7%8F%BE">テンソル積表現</a></li>
 </ol>
-</li>
-</ol>
-<p>ここでは，表現の既約性に関する定理としてシューアの補題を説明する．</p>
-<h2 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B0">シューアの補題Ⅰ</h2>
-<blockquote>
-<h3 id="%E8%A3%9C%E9%A1%8C%E2%85%B0">補題Ⅰ</h3>
-<p>$(D_1,V_1)$，$(D_2,V_2)$をそれぞれ群$G$の既約表現とする．このとき，線形変換$A$が繋絡作用素，つまり全ての$g ∈ G$に対して，<br>
+<p>表現のうち，テンソル積表現と呼ばれるものについて考える．2つの表現$(D_a,V_a)$および$(D_b,V_b)$を群Gの表現とする．（$\dim{V_a} = n, \dim{V_b} = m$）表現の基底はそれぞれ，<br>
+$$<br>
+\begin{gather*}<br>
+\ket{a_i} \quad (i=1,2,…,n) \cr<br>
+\ket{b_j} \quad (j=1,2,…,m)<br>
+\end{gather*}<br>
+$$<br>
+とする．この2組の基底を組合わせて$nm$個の基底$\ket{a_i} ⊗ \ket{b_j}$を作った時，その基底は空間$V_a ⊗ V_b$を構築する．このとき，$G$から$V_a ⊗ V_b$での一般線形群$GL(V_a ⊗ V_b)$への表現，<br>
 $$<br>
 \begin{equation*}<br>
-AD_1(g) = D_2(g)A<br>
+(D_a ⊗ D_b):G → GL(V_a ⊗ V_b)<br>
 \end{equation*}<br>
 $$<br>
-を満たすならば，$A$は$A=0$か$V_1$から$V_2$への同型写像である．</p>
-<blockquote>
-<h3 id="%E8%A8%BC%E6%98%8E">証明</h3>
-<p>$A$の核，$\textrm{Ker}A = \left\lbrace x ∈ V_1 \mid Ax=0 \right\rbrace$に属するような元$x$に対して，$AD_1(g)x = D_2(g)Ax = 0$であるから$D_1(g)x ∈ \textrm{Ker}A$である．すなわち$\textrm{Ker}{A}$は表現$D_1$の不変部分空間である．（つまり，$D_1(g)\textrm{Ker}A ⊂ \textrm{Ker}A$）<br>
-ここで，$D_1(g)$は既約表現であったので，不変部分空間は$\textrm{Ker}A = \lbrace 0 \rbrace$あるいは$\textrm{Ker}A = V_1$である．</p>
-<ol>
-<li>
-<p>$\textrm{Ker}A = V_1$のとき<br>
-任意の$x ∈ V_1$に対して$Ax = 0$を満たすように取るので，このとき$A=0$である．</p>
-</li>
-<li>
-<p>$\textrm{Ker}A = \lbrace 0 \rbrace$のとき<br>
-このときは$A ≠ 0$であり，単射である．なぜならば，もし$Ax_1 = Ax_2$を満たすような$x_1,x_2 ∈ V_1$が存在したとすると，式変形により$A(x_1 - x_2) = 0$となるが，これは$(x_1 - x_2) ∈ \textrm{Ker}A$を意味するので矛盾する．さらに，$A$は全射でもある．実際に，$x ∈ V_1$に対して$D_2(g)Ax = AD_1(g)x ∈ V_2$であるから，$A$による$V_1$の像，$AV_1$は表現$D_2(g)$の不変部分空間となる．$D_2(g)$は既約なので，$AV_1 = V_2$．よって，$D_2(g)$の不変部分空間は$\lbrace 0 \rbrace$を除いて$V_2$のみなので，$AV_1 = V_2$となり，これは全射を意味する．以上より，$A$は$V_1$から$V_2$への全単射であることがわかり，$A$は同型写像である．</p>
-</li>
-</ol>
-</blockquote>
-</blockquote>
-<h2 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B1">シューアの補題Ⅱ</h2>
-<blockquote>
-<p>補題II</p>
-</blockquote>
+を，<br>
+$$<br>
+\begin{equation*}<br>
+(D_a ⊗ D_b)(g) := D_a(g) ⊗ D_b(g)<br>
+\end{equation*}<br>
+$$<br>
+のように定義できる．基底を用いて書けば，<br>
+$$<br>
+\begin{equation*}<br>
+\bra{a}⊗\bra{b}\left(D_a(g) ⊗ D_b(g)\right)\ket{a'}⊗\ket{b'} = \braket{a\mid D_a(g) \mid a'}\braket{b\mid D_b(g) \mid b'}<br>
+\end{equation*}<br>
+$$<br>
+これを<strong>テンソル積表現</strong>と呼び，テンソル積表現を作ることによりより高い次元の表現を作ることができる．</p>
 
 
 <div style="text-align: center; margin-top: 20px;">

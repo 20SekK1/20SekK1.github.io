@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>007.md</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* 全体のリセット */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Noto Serif JP", serif; /* 明朝体またはセリフ体 */
+	background-color: #fdfdfd; /* やや白に近い背景色 */
+	color: #333; /* 文字は濃い灰色 */
+	line-height: 1.8; /* 行間を広めに */
+	padding: 20px;
+	font-size: 16px;
+  }
+  
+  /* ヘッダー */
+  header {
+	background-color: #283593; /* 深い青 */
+	color: white;
+	padding: 15px 20px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header a {
+	color: white;
+	text-decoration: none;
+  }
+  
+  header a:hover {
+	text-decoration: underline;
+  }
+  
+  /* メインコンテンツ */
+  main {
+	max-width: 800px;
+	margin: 40px auto; /* 中央寄せ */
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* わずかな影 */
+	border-radius: 5px; /* 角を少し丸く */
+  }
+  
+  /* 見出し */
+  h1, h2, h3 {
+	font-family: "Noto Sans JP", sans-serif; /* 見出しもゴシック体 */
+	color: #283593; /* 深い青 */
+	margin-bottom: 20px;
+  }
+  
+  h1 {
+	font-size: 2em;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+  }
+  
+  h2 {
+	font-size: 1.5em;
+	margin-top: 30px;
+  }
+  
+  h3 {
+	font-size: 1.2em;
+  }
+  
+  /* リンク */
+  a {
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  /* リスト */
+  ul, ol {
+	margin-left: 20px;
+	padding-left: 10px;
+  }
+  
+  li {
+	margin-bottom: 10px;
+  }
+  
+  /* 引用 */
+  blockquote {
+	border-left: 5px solid #ccc;
+	padding: 10px 20px;
+	margin: 20px 0;
+	background-color: #f9f9f9;
+	font-style: italic;
+	color: #666;
+  }
+  
+  /* フッター */
+  footer {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px 0;
+	font-size: 0.9em;
+	color: #999;
+  }
+  
+  footer a {
+	color: #283593;
+  }
+  
+  footer a:hover {
+	text-decoration: underline;
+  }
+  
+  /* モバイル対応 */
+  @media (max-width: 768px) {
+	body {
+	  padding: 10px;
+	  font-size: 16px;
+	}
+  
+	main {
+	  padding: 15px;
+	}
+  
+	h1 {
+	  font-size: 1.8em;
+	}
+  
+	h2 {
+	  font-size: 1.3em;
+	}
+  }
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<!--ここから追記 1.(数式に対応させる)-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+    },
+      messageStyle: "none",
+      "HTML-CSS": {
+        availableFonts: ["TeX"],  <!-- 使用するフォントを TeX に設定 -->
+        webFont: "TeX" <!-- Web フォントも TeX を利用 -->
+      }
+    });
+</script>
+<!--追記 1.ここまで-->
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C">シューアの補題</h1>
+<ol>
+<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C">シューアの補題</a>
+<ol>
+<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B0">シューアの補題Ⅰ</a></li>
+<li><a href="#%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B1">シューアの補題Ⅱ</a></li>
+</ol>
+</li>
+</ol>
+<p>ここでは，表現の既約性に関する定理としてシューアの補題を説明する．</p>
+<h2 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B0">シューアの補題Ⅰ</h2>
+<blockquote>
+<h3 id="%E8%A3%9C%E9%A1%8C%E2%85%B0">補題Ⅰ</h3>
+<p>$(D_1,V_1)$，$(D_2,V_2)$をそれぞれ群$G$の既約表現とする．このとき，線形変換$A$が繋絡作用素，つまり全ての$g ∈ G$に対して，<br>
+$$<br>
+\begin{equation*}<br>
+AD_1(g) = D_2(g)A<br>
+\end{equation*}<br>
+$$<br>
+を満たすならば，$A$は$A=0$か$V_1$から$V_2$への同型写像である．</p>
+<blockquote>
+<h3 id="%E8%A8%BC%E6%98%8E">証明</h3>
+<p>$A$の核，$\textrm{Ker}A = \left\lbrace x ∈ V_1 \mid Ax=0 \right\rbrace$に属するような元$x$に対して，$AD_1(g)x = D_2(g)Ax = 0$であるから$D_1(g)x ∈ \textrm{Ker}A$である．すなわち$\textrm{Ker}{A}$は表現$D_1$の不変部分空間である．（つまり，$D_1(g)\textrm{Ker}A ⊂ \textrm{Ker}A$）<br>
+ここで，$D_1(g)$は既約表現であったので，不変部分空間は$\textrm{Ker}A = \lbrace 0 \rbrace$あるいは$\textrm{Ker}A = V_1$である．</p>
+<ol>
+<li>
+<p>$\textrm{Ker}A = V_1$のとき<br>
+任意の$x ∈ V_1$に対して$Ax = 0$を満たすように取るので，このとき$A=0$である．</p>
+</li>
+<li>
+<p>$\textrm{Ker}A = \lbrace 0 \rbrace$のとき<br>
+このときは$A ≠ 0$であり，単射である．なぜならば，もし$Ax_1 = Ax_2$を満たすような$x_1,x_2 ∈ V_1$が存在したとすると，式変形により$A(x_1 - x_2) = 0$となるが，これは$(x_1 - x_2) ∈ \textrm{Ker}A$を意味するので矛盾する．さらに，$A$は全射でもある．実際に，$x ∈ V_1$に対して$D_2(g)Ax = AD_1(g)x ∈ V_2$であるから，$A$による$V_1$の像，$AV_1$は表現$D_2(g)$の不変部分空間となる．$D_2(g)$は既約なので，$AV_1 = V_2$．よって，$D_2(g)$の不変部分空間は$\lbrace 0 \rbrace$を除いて$V_2$のみなので，$AV_1 = V_2$となり，これは全射を意味する．以上より，$A$は$V_1$から$V_2$への全単射であることがわかり，$A$は同型写像である．</p>
+</li>
+</ol>
+</blockquote>
+</blockquote>
+<h2 id="%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%A2%E3%81%AE%E8%A3%9C%E9%A1%8C%E2%85%B1">シューアの補題Ⅱ</h2>
+<p>この補題は，有限群について成立することに留意する．</p>
+<blockquote>
+<h3 id="%E8%A3%9C%E9%A1%8Cii">補題II</h3>
+<p>有限群$G$の完全可約な表現$D$が既約であるための必要十分条件は，全ての$D(g)$（$g ∈ G$）と可換な線形変換$A$が$A = aI$（$a ∈ \mathbb{C}$）に限られることである．</p>
+<blockquote>
+<h3 id="%E8%A8%BC%E6%98%8E">証明</h3>
+<h4 id="%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6">（必要条件）</h4>
+<p>$a$を$A$の固有値とし，$B = A - aI$とすると，$\det{B}=0$である．$D(g)$と$A$が可換なので，$D(g)$と$B$もまた可換である．このとき全ての$g ∈ G$に対し$BD(g) = D(g)B$であるから，<a href="#%E8%A3%9C%E9%A1%8C%E2%85%B0">補題Ⅰ</a>より$B$は同型写像であるか$B = 0$である．しかしながら，$\det{B}=0$なので$B$逆行列を持たないから同型写像ではありえない．よって$B=0$で，$A=aI$を得る．</p>
+<h4 id="%E5%8D%81%E5%88%86%E6%9D%A1%E4%BB%B6">（十分条件）</h4>
+<p>十分条件の対偶である，「完全可約な表現$D$が既約でない時は全ての$D(g)$と可換で$A=aI$でないものが存在する」を言えばよい．$D$の既約な不変部分空間への射影$P$を取ると，$PD(g)P = D(g)P$が成立する．また，$D$が完全可約なことから，補空間も不変部分空間となるから，補空間への射影$(1-P)$も$(1-P)D(g)(1-P) = D(g)(1-P)$を満たす．よって，$D(g)P = PD(g) = PD(g)P$となる．よって$P$は全ての$D(g)$と可換である．しかし，$D$が既約でないとすれば$P$は全空間への射影ではないので$P=aI$の形には書けない．</p>
+</blockquote>
+</blockquote>
+
+
+<div style="text-align: center; margin-top: 20px;">
+	<button class="button before" onclick="goToBefore()">前の記事</button>
+	<button class="home-button top" onclick="goToBack()">戻る</button>
+	<button class="button next" onclick="goToNext()">次の記事</button>
+</div>
+
+<script>
+	function goToBefore() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToNext() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToBack() {
+		// 移動先のURLを指定
+		window.location.href = "../../../contents/Representation.html"; 
+	}
+</script>
+
+<div style="text-align: center;">
+    <button class="home-button top" onclick="goToHome()">Home</button>
+  </div>
+  
+  <script>
+    function goToHome() {
+      // 移動先のURLを指定
+      window.location.href = "../../../index.html"; 
+    }
+  </script>
+
+</body>
+</html>
