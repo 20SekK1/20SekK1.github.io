@@ -14,7 +14,7 @@
   }
   
   body {
-	font-family: "Noto Serif JP", serif; /* 明朝体またはセリフ体 */
+	font-family: "Noto Sans JP", sans-serif;
 	background-color: #fdfdfd; /* やや白に近い背景色 */
 	color: #333; /* 文字は濃い灰色 */
 	line-height: 1.8; /* 行間を広めに */
@@ -99,7 +99,6 @@
 	padding: 10px 20px;
 	margin: 20px 0;
 	background-color: #f9f9f9;
-	font-style: italic;
 	color: #666;
   }
   
@@ -177,11 +176,11 @@
 <p>表現のうち，テンソル積表現と呼ばれるものについて考える．2つの表現$(D_a,V_a)$および$(D_b,V_b)$を群Gの表現とする．（$\dim{V_a} = n, \dim{V_b} = m$）表現の基底はそれぞれ，<br>
 $$<br>
 \begin{gather*}<br>
-\ket{a_i} \quad (i=1,2,…,n) \cr<br>
-\ket{b_j} \quad (j=1,2,…,m)<br>
+\left|{a_i}\right&gt; \quad (i=1,2,…,n) \cr<br>
+\left|{b_j}\right&gt; \quad (j=1,2,…,m)<br>
 \end{gather*}<br>
 $$<br>
-とする．この2組の基底を組合わせて$nm$個の基底$\ket{a_i} ⊗ \ket{b_j}$を作った時，その基底は空間$V_a ⊗ V_b$を構築する．このとき，$G$から$V_a ⊗ V_b$での一般線形群$GL(V_a ⊗ V_b)$への表現，<br>
+とする．この2組の基底を組合わせて$nm$個の基底$\left|{a_i}\right&gt; ⊗ \left|{b_j}\right&gt;$を作った時，その基底は空間$V_a ⊗ V_b$を構築する．このとき，$G$から$V_a ⊗ V_b$での一般線形群$GL(V_a ⊗ V_b)$への表現，<br>
 $$<br>
 \begin{equation*}<br>
 (D_a ⊗ D_b):G → GL(V_a ⊗ V_b)<br>
@@ -196,7 +195,7 @@ $$<br>
 のように定義できる．基底を用いて書けば，<br>
 $$<br>
 \begin{equation*}<br>
-\bra{a}⊗\bra{b}\left(D_a(g) ⊗ D_b(g)\right)\ket{a'}⊗\ket{b'} = \braket{a\mid D_a(g) \mid a'}\braket{b\mid D_b(g) \mid b'}<br>
+\left&lt;{a}\right|⊗\left&lt;{b}\right|\left(D_a(g) ⊗ D_b(g)\right)\left|{a'}\right&gt;⊗\left|{b'}\right&gt; = \left&lt;{a\mid D_a(g) \mid a'}\right&gt;\left&lt;{b\mid D_b(g) \mid b'}\right&gt;<br>
 \end{equation*}<br>
 $$<br>
 これを<strong>テンソル積表現</strong>と呼び，テンソル積表現を作ることによりより高い次元の表現を作ることができる．</p>
