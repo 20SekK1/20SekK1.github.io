@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>008.md</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* 全体のリセット */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Noto Sans JP", sans-serif;
+	background-color: #fdfdfd; /* やや白に近い背景色 */
+	color: #333; /* 文字は濃い灰色 */
+	line-height: 1.8; /* 行間を広めに */
+	padding: 20px;
+	font-size: 16px;
+  }
+  
+  /* ヘッダー */
+  header {
+	background-color: #283593; /* 深い青 */
+	color: white;
+	padding: 15px 20px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header a {
+	color: white;
+	text-decoration: none;
+  }
+  
+  header a:hover {
+	text-decoration: underline;
+  }
+  
+  /* メインコンテンツ */
+  main {
+	max-width: 800px;
+	margin: 40px auto; /* 中央寄せ */
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* わずかな影 */
+	border-radius: 5px; /* 角を少し丸く */
+  }
+  
+  /* 見出し */
+  h1, h2, h3 {
+	font-family: "Noto Sans JP", sans-serif; /* 見出しもゴシック体 */
+	color: #283593; /* 深い青 */
+	margin-bottom: 20px;
+  }
+  
+  h1 {
+	font-size: 2em;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+  }
+  
+  h2 {
+	font-size: 1.5em;
+	margin-top: 30px;
+  }
+  
+  h3 {
+	font-size: 1.2em;
+  }
+  
+  /* リンク */
+  a {
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  /* リスト */
+  ul, ol {
+	margin-left: 20px;
+	padding-left: 10px;
+  }
+  
+  li {
+	margin-bottom: 10px;
+  }
+  
+  /* 引用 */
+  blockquote {
+	border-left: 5px solid #ccc;
+	padding: 10px 20px;
+	margin: 20px 0;
+	background-color: #f9f9f9;
+	color: #666;
+  }
+  
+  /* フッター */
+  footer {
+	text-align: center;
+	margin-top: 40px;
+	padding: 20px 0;
+	font-size: 0.9em;
+	color: #999;
+  }
+  
+  footer a {
+	color: #283593;
+  }
+  
+  footer a:hover {
+	text-decoration: underline;
+  }
+  
+  /* モバイル対応 */
+  @media (max-width: 768px) {
+	body {
+	  padding: 10px;
+	  font-size: 16px;
+	}
+  
+	main {
+	  padding: 15px;
+	}
+  
+	h1 {
+	  font-size: 1.8em;
+	}
+  
+	h2 {
+	  font-size: 1.3em;
+	}
+  }
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<!--ここから追記 1.(数式に対応させる)-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+    },
+      messageStyle: "none",
+      "HTML-CSS": {
+        availableFonts: ["TeX"],  <!-- 使用するフォントを TeX に設定 -->
+        webFont: "TeX" <!-- Web フォントも TeX を利用 -->
+      }
+    });
+</script>
+<!--追記 1.ここまで-->
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E8%A1%A8%E7%8F%BE%E8%AB%96%E3%81%AE%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E3%81%B8%E3%81%AE%E5%BF%9C%E7%94%A8">表現論の量子力学への応用</h1>
+<ol>
+<li><a href="#%E8%A1%A8%E7%8F%BE%E8%AB%96%E3%81%AE%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E3%81%B8%E3%81%AE%E5%BF%9C%E7%94%A8">表現論の量子力学への応用</a>
+<ol>
+<li><a href="#%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%AF%BE%E7%A7%B0%E6%80%A7">量子力学における対称性</a></li>
+<li><a href="#%E7%A9%BA%E9%96%93%E5%8F%8D%E8%BB%A2%E3%81%A7%E3%81%AE%E4%BE%8B">空間反転での例</a></li>
+<li><a href="#%E6%B0%B4%E7%B4%A0%E5%8E%9F%E5%AD%90%E3%81%A7%E3%81%AE%E4%BE%8B">水素原子での例</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%AF%BE%E7%A7%B0%E6%80%A7">量子力学における対称性</h2>
+<p>量子力学における対称性とは，ユニタリ演算子$U$であってハミルトニアンと可換，すなわち，<br>
+$$<br>
+\begin{equation*}<br>
+[H, U] = 0<br>
+\end{equation*}<br>
+$$<br>
+を満たすものであった．このようなユニタリ演算子の全体$G=\lbrace U,V,\cdots \rbrace$全体は容易な計算から群を成すことが確かめられる．</p>
+<p>シュレディンガー方程式，<br>
+$$<br>
+\begin{equation*}<br>
+Hψ = Eψ<br>
+\end{equation*}<br>
+$$<br>
+に対して$G$に属する演算子$U$を作用させると，可換であることから，<br>
+$$<br>
+\begin{equation*}<br>
+H(Uψ) = E(Uψ)<br>
+\end{equation*}<br>
+$$<br>
+が得られる．従って，$ψ$がシュレディンガー方程式の解ならば$Uψ$も同じエネルギー固有値$E$を持つ解であると言うことが分かる．つまり，$Uψ$が$ψ$の定数倍でなければこの固有状態は縮退しているということになる．<br>
+<br><br>
+この話をより一般にすると，固有値$E$に対する一つの固有関数$ψ_1$から出発して，$G$の全ての元を$ψ_1$に作用させることで独立な固有関数の組$\psi_1,\psi_2,\ldots\psi_n \quad (n ≤ g)$を得る．ただし，ここで$g$は群の位数．これらの関数は，群$G$の表現の基底になっており，表現空間はこれらの固有関数が張る空間として解釈できる．</p>
+<h2 id="%E7%A9%BA%E9%96%93%E5%8F%8D%E8%BB%A2%E3%81%A7%E3%81%AE%E4%BE%8B">空間反転での例</h2>
+<p>ここでは，上記の議論を具体的に空間反転に関する演算子$U_P$を用い考える．系が空間反転対称性を持つならば，<br>
+$$<br>
+\begin{equation*}<br>
+[H, U_P] = 0<br>
+\end{equation*}<br>
+$$<br>
+であり，${U_P}^2 = 1$であるから，$G = \lbrace I,U_P \rbrace$となり，これは位数が2の巡回群であることが分かる．そこで，シュレディンガー方程式の一つの固有関数を$\psi_1$と書くと，$ψ_1$と，$ψ_2 = U_Pψ_1$は同じエネルギー固有値を持つ二つの縮退した固有関数であることが分かる．$U_Pψ_2 = {U_P}^2ψ_1 = ψ_1$であることを考慮すると，これらに対する$G$の作用は，<br>
+$$<br>
+\begin{equation*}<br>
+I<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_1 \cr<br>
+ψ_2<br>
+\end{array}<br>
+\right)<br>
+=<br>
+\left(<br>
+\begin{array}{cc}<br>
+1 &amp; 0 \cr<br>
+0 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_1 \cr<br>
+ψ_2<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+G<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_1 \cr<br>
+ψ_2<br>
+\end{array}<br>
+\right)<br>
+=<br>
+\left(<br>
+\begin{array}{cc}<br>
+0 &amp; 1 \cr<br>
+1 &amp; 0<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_1 \cr<br>
+ψ_2<br>
+\end{array}<br>
+\right)<br>
+\end{equation*}<br>
+$$<br>
+となるから，群$G$の表現とは行列の組，<br>
+$$<br>
+\begin{equation*}<br>
+\left\lbrace<br>
+\left(<br>
+\begin{array}{cc}<br>
+1 &amp; 0 \cr<br>
+0 &amp; 1<br>
+\end{array}<br>
+\right),<br>
+\left(<br>
+\begin{array}{cc}<br>
+0 &amp; 1 \cr<br>
+1 &amp; 0<br>
+\end{array}<br>
+\right)<br>
+\right\rbrace<br>
+\end{equation*}<br>
+$$<br>
+のことである．しかしながら，この表現は既約ではない．よって，基底をうまく変換することで既約な表現を考える．</p>
+<p>天下りではあるが，新しい表現の基底を，<br>
+$$<br>
+\begin{equation*}<br>
+ψ_e =  \dfrac{1}{\sqrt{2}}(ψ_1 + ψ_2),\qquad ψ_0 =  \dfrac{1}{\sqrt{2}}(ψ_1 - ψ_2)<br>
+\end{equation*}<br>
+$$<br>
+と選ぶと，<br>
+$$<br>
+\begin{equation*}<br>
+I<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_e \cr<br>
+ψ_0<br>
+\end{array}<br>
+\right)<br>
+=<br>
+\left(<br>
+\begin{array}{cc}<br>
+1 &amp; 0 \cr<br>
+0 &amp; 1<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_e \cr<br>
+ψ_0<br>
+\end{array}<br>
+\right)<br>
+\qquad<br>
+G<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_e \cr<br>
+ψ_0<br>
+\end{array}<br>
+\right)<br>
+=<br>
+\left(<br>
+\begin{array}{cc}<br>
+1 &amp; 0 \cr<br>
+0 &amp; -1<br>
+\end{array}<br>
+\right)<br>
+\left(<br>
+\begin{array}{c}<br>
+ψ_e \cr<br>
+ψ_0<br>
+\end{array}<br>
+\right)<br>
+\end{equation*}<br>
+$$<br>
+と書くことができることがわかる．従って，二つの群の表現は，二つの1次元の既約表現の直和に分解できることが確認できた．さらに，二つ目の表現に着目すると，この表現行列を定める表現空間の基底はそれぞれ偶パリティ，奇パリティに対応することが確認できた．</p>
+<h2 id="%E6%B0%B4%E7%B4%A0%E5%8E%9F%E5%AD%90%E3%81%A7%E3%81%AE%E4%BE%8B">水素原子での例</h2>
+<p>次に，水素原子の例を考える．このときハミルトニアンは，<br>
+$$<br>
+\begin{equation*}<br>
+H = -\dfrac{ℏ^2}{2m}∇^2 - \dfrac{e^2}{4πɛ_0}\dfrac{1}{r}<br>
+\end{equation*}<br>
+$$<br>
+で与えられる．</p>
+<p>このポテンシャルは中心からの距離$r$のみに依存しているので，この系は中心周りに対する回転対称性を有していることがわかるので，空間回転の演算子，<br>
+$$<br>
+\begin{equation*}<br>
+U_R(\boldsymbol{𝞗}) = \exp\left( -\dfrac{i}{ℏ}\boldsymbol{𝞗}⋅\boldsymbol{L} \right)<br>
+\end{equation*}<br>
+$$<br>
+はハミルトニアンと可換で系のエネルギーはこの演算子による変換に対して縮退していることが予想できる．</p>
+<p>水素原子のシュレディンガー方程式の固有状態は，主量子数$n=1,2,3,…$，軌道角運動量量子数$l=0,1,2,…$，磁気量子数$m=l,l-1,l-2,\ldots, -l$で指定され，波動関数は，<br>
+$$<br>
+\begin{equation*}<br>
+R_{nl}(r)Y_{lm}(θ,𝛗)<br>
+\end{equation*}<br>
+$$<br>
+という形で表され，エネルギー固有値は，<br>
+$$<br>
+\begin{equation*}<br>
+E_n = \dfrac{m_ee^4}{32π^2{ɛ_0}^2ℏ^2}\dfrac{1}{n^2}<br>
+\end{equation*}<br>
+$$<br>
+で与えられる．エネルギー固有値は$l,m$の値によらず定まるので，$l$と$m$の両方について縮退していることが分かる．ここで，前者の縮退の理由はポテンシャルが$1/r$の比例することが原因であり，後者に関する理由が今回考えたい空間回転に対する対称性が原因の箇所である．</p>
+<p>固有関数の中で空間回転に関係しているのは，球面調和関数と呼ばれる$Y_{lm}(θ,φ)$の箇所であり，関数空間$\lbrace Y_{lm}(θ,φ)\rbrace$は空間回転の演算子が作る回転群の表現空間になっている．この表現は既約であり，既約表現は量子数$l$で指定される．$l$で指定された表現では，$m$個の，つまり$(2l+1)$個の固有関数$Y_{lm}(θ,φ)$が表現の基底であるから，表現の次元は$(2l+1)$次元となる．</p>
+
+
+<div style="text-align: center; margin-top: 20px;">
+	<button class="button before" onclick="goToBefore()">前の記事</button>
+	<button class="home-button top" onclick="goToBack()">戻る</button>
+	<button class="button next" onclick="goToNext()">次の記事</button>
+</div>
+
+<script>
+	function goToBefore() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToNext() {
+		// 移動先のURLを指定
+		window.location.href = ""; 
+	}
+
+	function goToBack() {
+		// 移動先のURLを指定
+		window.location.href = "../../../contents/Representation.html"; 
+	}
+</script>
+
+<div style="text-align: center;">
+    <button class="home-button top" onclick="goToHome()">Home</button>
+  </div>
+  
+  <script>
+    function goToHome() {
+      // 移動先のURLを指定
+      window.location.href = "../../../index.html"; 
+    }
+  </script>
+
+</body>
+</html>
