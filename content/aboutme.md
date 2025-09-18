@@ -1,6 +1,6 @@
 +++
 date = '2025-09-19T00:26:12+09:00'
-draft = true
+draft = false
 title = '自己紹介'
 menu = 'main'
 weight = 10
