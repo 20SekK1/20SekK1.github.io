@@ -1,0 +1,9 @@
+/* static/css/custom.css */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 見出しだけ変えたい場合などは個別に指定も可能 */
+h1, h2, h3 {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
