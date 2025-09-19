@@ -5,3 +5,9 @@ title = 'Research & Notes'
 menu = 'main'
 weight = 20
 +++
+
+## Research
+
+---
+
+## Notes

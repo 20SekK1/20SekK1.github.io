@@ -2,3 +2,8 @@ baseURL = 'https://20SekK1.github.io/'
 languageCode = 'ja'
 title = '堰のページ'
 theme = 'ananke'
+
+# hugo.toml
+
+[outputs]
+  home = ["HTML", "JSON"]
