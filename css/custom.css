@@ -1,0 +1,6 @@
+/* static/css/custom.css */
+
+/* 既存のスタイル（フォント設定など）... */
+body main{
+  font-family: 'Noto Sans JP', sans-serif;
+}
