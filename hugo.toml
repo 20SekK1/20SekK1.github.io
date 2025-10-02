@@ -1,9 +1,85 @@
 baseURL = 'https://20SekK1.github.io/'
 languageCode = 'ja'
 title = '堰のページ'
-theme = 'ananke'
+theme = 'PaperMod'
+MetaDataFormat = "yaml"
 
 # hugo.toml
 
 [outputs]
   home = ["HTML", "JSON"]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "research"
+    name = "Research & Note"
+    url = "/research/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 12
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    url = "/archives/"
+    weight = 13
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 14
+    # サイトのトップレベル設定
+
+# サイトのトップレベル設定    
+
+# --- PaperModのパラメータ設定 ---
+[params]
+    #env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+    description = "ExampleSite description"
+    keywords = ["Blog", "Portfolio", "PaperMod"]
+
+    # テーマ設定
+    defaultTheme = "auto" # ページのテーマ設定 "dark", "light"も決められる
+    disableThemeToggle = false # dark/light の変更ボタンを表示するかどうか
+
+    # 記事表示に関する設定
+    ShowReadingTime = true      # 各記事の読み終わるまでの時間を表記するかどうか
+    ShowShareButtons = false    # 各記事の下部に表示するshareボタンの表示の有無
+    ShowPostNavLinks = true     # 前後のポストへのNavigationを表示するかどうか
+    ShowBreadCrumbs = true      # 各記事の階層関係を表示するかどうか
+    ShowCodeCopyButtons = false # 記事内のコードをコピーするボタンを表示するかどうか
+    ShowWordCount = true        # 各記事の文字数を表記するかどうか
+    ShowRssButtonInSectionTermList = true # RSSボタンの表示の有無
+    UseHugoToc = true # Hugoの組み込みTOC機能を使用するかどうか
+    disableSpecial1stPost = false # スペシャル記事の表示有無
+    disableScrollToTop = false # 最上部へのスクロールボタンの表示の有無
+
+    # 記事のメタ情報表示に関する設定
+    hidemeta = false # Search対象から各記事のmeta情報を隠すかどうか
+    hideSummary = false # Search対象から各記事のSummaryを隠すかどうか (個別に隠すなら各記事でどうぞ)
+    showtoc = true  # TOCを表示するかどうか
+    tocopen = false # 初期で展開しておくかどうか
+    mainSections = ["posts"]
+    
+    # コメント設定 (PaperModでは通常、以下のように子テーブルで設定します)
+    # 詳細はコメントシステム (utterances, disqus等) の設定方法に依存します。
+    [params.comments]
+        enabled = true # コメントを記事に表示するかどうか
+
+  # タクソノミー（分類）設定を追加
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
