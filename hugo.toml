@@ -16,28 +16,22 @@ theme = 'PaperMod'
     weight = 10
 
   [[menu.main]]
-    identifier = "research"
-    name = "Research & Note"
-    url = "/research/"
-    weight = 11
-
-  [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "/search/"
-    weight = 12
+    weight = 11
 
   [[menu.main]]
     identifier = "archives"
     name = "Archives"
     url = "/archives/"
-    weight = 13
+    weight = 12
 
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 14
+    weight = 13
     # サイトのトップレベル設定
 
 # サイトのトップレベル設定    
