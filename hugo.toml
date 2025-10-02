@@ -20,7 +20,7 @@ MetaDataFormat = "yaml"
     identifier = "research"
     name = "Research & Note"
     url = "/research/"
-    weight = 10
+    weight = 11
 
   [[menu.main]]
     identifier = "search"
@@ -67,7 +67,7 @@ MetaDataFormat = "yaml"
 
     # 記事のメタ情報表示に関する設定
     hidemeta = false # Search対象から各記事のmeta情報を隠すかどうか
-    hideSummary = false # Search対象から各記事のSummaryを隠すかどうか (個別に隠すなら各記事でどうぞ)
+    hideSummary = false # Search対象から各記事のSummaryを隠すかどうか
     showtoc = true  # TOCを表示するかどうか
     tocopen = false # 初期で展開しておくかどうか
     mainSections = ["posts"]
