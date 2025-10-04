@@ -56,3 +56,14 @@ theme = 'PaperMod'
     ShowWordCount = true        # 各記事の文字数を表記するかどうか
     UseHugoToc = true # Hugoの組み込みTOC機能を使用するかどうか
     disableScrollToTop = true # 最上部へのスクロールボタンの表示の有無
+
+# hugo.toml
+
+  [markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$']]
+          inline = [['$', '$']]
